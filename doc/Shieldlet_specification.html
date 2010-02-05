@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+	"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- Processed by MultiMarkdown -->
+		<link type="text/css" rel="stylesheet" href="amino.css" />
+		<meta name="Format" content="complete" />
+	</head>
+<body>
+
+<h1 id="shieldletspecification">Shieldlet Specification</h1>
+
+<p>Version 0.1 draft</p>
+
+<h2 id="shieldlet">1.0 Shieldlet</h2>
+
+<p><strong>1.1 Shieldlet</strong>
+Shieldlets are small I/O daughter boards (modules) for Amino development and deployment boards. A layout example is described below:</p>
+
+<p><img id="diagram" src="shieldlet_diagram.png" alt="Diagram" title="" /></p>
+
+<p><strong>1.2 Dimensions</strong></p>
+
+<table>
+<col align="center" />
+<col align="center" />
+<thead>
+<tr>
+	<th>Dim</th>
+	<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="center">L</td>
+	<td align="center">&lt;=50mm</td>
+</tr>
+<tr>
+	<td align="center">H</td>
+	<td align="center">&lt;=25mm</td>
+</tr>
+<tr>
+	<td align="center">C</td>
+	<td align="center">~10mm</td>
+</tr>
+<tr>
+	<td align="center">AB</td>
+	<td align="center">25mm</td>
+</tr>
+<tr>
+	<td align="center">DC</td>
+	<td align="center">35mm</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>1.3 Description</strong>
+The layout shown illustrates the full standard shieldlet expansion area, consisting of either two 8bit 50 x 25 shields or a single 16bit 50 x 50mm shield.</p>
+
+<p><strong>1.4 Connections</strong>
+Each shieldlet is made up of 2 x 12 pin connectors each dual row (2x6) pin with a standard 0.1 inch pitch, the first (left) is the parallel data port connector and the second (right) is the control/serial connector.</p>
+
+<p><strong>Shieldlet A Data Port Connector</strong></p>
+
+<table>
+<col align="center" />
+<col align="center" />
+<col align="left" />
+<col align="left" />
+<col align="left" />
+<thead>
+<tr>
+	<th>Pin</th>
+	<th>Name</th>
+	<th>Default(8bit)</th>
+	<th>Nibble(4bit)</th>
+	<th>Word(16bit)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="center">1</td>
+	<td align="center">DA0</td>
+	<td colspan="3" align="left">Digital IO bit 0</td>
+</tr>
+<tr>
+	<td align="center">2</td>
+	<td align="center">DA1</td>
+	<td colspan="3" align="left">Digital IO bit 1</td>
+</tr>
+<tr>
+	<td align="center">3</td>
+	<td align="center">PA0</td>
+	<td align="left">Byte Port A bit 0</td>
+	<td align="left">Nibble Port A bit 0</td>
+	<td align="left">Word Port A bit 0</td>
+</tr>
+<tr>
+	<td align="center">4</td>
+	<td align="center">PA1</td>
+	<td align="left">Byte Port A bit 1</td>
+	<td align="left">Nibble Port A bit 1</td>
+	<td align="left">Word Port A bit 1</td>
+</tr>
+<tr>
+	<td align="center">5</td>
+	<td align="center">PA2</td>
+	<td align="left">Byte Port A bit 2</td>
+	<td align="left">Nibble Port A bit 2</td>
+	<td align="left">Word Port A bit 2</td>
+</tr>
+<tr>
+	<td align="center">6</td>
+	<td align="center">PA3</td>
+	<td align="left">Byte Port A bit 3</td>
+	<td align="left">Nibble Port A bit 3</td>
+	<td align="left">Word Port A bit 3</td>
+</tr>
+<tr>
+	<td align="center">7</td>
+	<td align="center">PA4</td>
+	<td align="left">Byte Port A bit 4</td>
+	<td align="left">Nibble Port A bit 4</td>
+	<td align="left">Word Port A bit 4</td>
+</tr>
+<tr>
+	<td align="center">8</td>
+	<td align="center">PA5</td>
+	<td align="left">Byte Port A bit 5</td>
+	<td align="left">Nibble Port A bit 5</td>
+	<td align="left">Word Port A bit 5</td>
+</tr>
+<tr>
+	<td align="center">9</td>
+	<td align="center">PA6</td>
+	<td align="left">Byte Port A bit 6</td>
+	<td align="left">Nibble Port A bit 6</td>
+	<td align="left">Word Port A bit 6</td>
+</tr>
+<tr>
+	<td align="center">10</td>
+	<td align="center">PA7</td>
+	<td align="left">Byte Port A bit 7</td>
+	<td align="left">Nibble Port A bit 7</td>
+	<td align="left">Word Port A bit 7</td>
+</tr>
+<tr>
+	<td align="center">1</td>
+	<td align="center">DA2</td>
+	<td colspan="3" align="left">Digital IO bit 2</td>
+</tr>
+<tr>
+	<td align="center">1</td>
+	<td align="center">DA3</td>
+	<td colspan="3" align="left">Digital IO bit 3</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Shieldlet A Control Connector</strong></p>
+
+<table>
+<col align="center" />
+<col align="center" />
+<col align="left" />
+<col align="left" />
+<thead>
+<tr>
+	<th>Pin</th>
+	<th>Name</th>
+	<th>Function</th>
+	<th>Alternate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="center">1</td>
+	<td align="center">GND</td>
+	<td colspan="2" align="left">Digital IO Ground</td>
+</tr>
+<tr>
+	<td align="center">2</td>
+	<td align="center">5V</td>
+	<td colspan="2" align="left">5 Volt Supply</td>
+</tr>
+<tr>
+	<td align="center">3</td>
+	<td align="center">MOSI</td>
+	<td colspan="2" align="left">SPI - Serial IN</td>
+</tr>
+<tr>
+	<td align="center">4</td>
+	<td align="center">SCLK</td>
+	<td colspan="2" align="left">SPI - Serial Clock</td>
+</tr>
+<tr>
+	<td align="center">5</td>
+	<td align="center">SA0</td>
+	<td colspan="2" align="left">Virtual Shield Address 0</td>
+</tr>
+<tr>
+	<td align="center">6</td>
+	<td align="center">SA1</td>
+	<td colspan="2" align="left">Virtual Shield Address 1</td>
+</tr>
+<tr>
+	<td align="center">7</td>
+	<td align="center">GND</td>
+	<td colspan="2" align="left">Digital IO Ground</td>
+</tr>
+<tr>
+	<td align="center">8</td>
+	<td align="center">3.3V</td>
+	<td colspan="2" align="left">3.3 Volt Supply</td>
+</tr>
+<tr>
+	<td align="center">9</td>
+	<td align="center">SDA/Tx</td>
+	<td align="left">I2C - Port A Data</td>
+	<td align="left">Tx</td>
+</tr>
+<tr>
+	<td align="center">10</td>
+	<td align="center">SCL/RX</td>
+	<td align="left">I2C - Port B Clock</td>
+	<td align="left">Rx</td>
+</tr>
+<tr>
+	<td align="center">11</td>
+	<td align="center">SS</td>
+	<td colspan="2" align="left">SPI - Serial Select</td>
+</tr>
+<tr>
+	<td align="center">12</td>
+	<td align="center">MISO</td>
+	<td colspan="2" align="left">SPI - Serial Out</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Shieldlet B Data Port Connector</strong></p>
+
+<table>
+<col align="center" />
+<col align="center" />
+<col align="left" />
+<col align="left" />
+<col align="left" />
+<thead>
+<tr>
+	<th>Pin</th>
+	<th>Name</th>
+	<th>Default(8bit)</th>
+	<th>Nibble(4bit)</th>
+	<th>Word(16bit)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="center">1</td>
+	<td align="center">DA4</td>
+	<td colspan="3" align="left">Digital IO bit 4</td>
+</tr>
+<tr>
+	<td align="center">2</td>
+	<td align="center">DA5</td>
+	<td colspan="3" align="left">Digital IO bit 5</td>
+</tr>
+<tr>
+	<td align="center">3</td>
+	<td align="center">PB0</td>
+	<td align="left">Byte Port B bit 0</td>
+	<td align="left">Nibble Port C bit 0</td>
+	<td align="left">Word Port A bit 8</td>
+</tr>
+<tr>
+	<td align="center">4</td>
+	<td align="center">PB2</td>
+	<td align="left">Byte Port B bit 1</td>
+	<td align="left">Nibble Port C bit 1</td>
+	<td align="left">Word Port A bit 9</td>
+</tr>
+<tr>
+	<td align="center">5</td>
+	<td align="center">PB2</td>
+	<td align="left">Byte Port B bit 2</td>
+	<td align="left">Nibble Port D bit 2</td>
+	<td align="left">Word Port A bit 10</td>
+</tr>
+<tr>
+	<td align="center">6</td>
+	<td align="center">PB3</td>
+	<td align="left">Byte Port B bit 3</td>
+	<td align="left">Nibble Port D bit 3</td>
+	<td align="left">Word Port A bit 3</td>
+</tr>
+<tr>
+	<td align="center">7</td>
+	<td align="center">PB4</td>
+	<td align="left">Byte Port B bit 4</td>
+	<td align="left">Nibble Port D bit 4</td>
+	<td align="left">Word Port A bit 4</td>
+</tr>
+<tr>
+	<td align="center">8</td>
+	<td align="center">PB5</td>
+	<td align="left">Byte Port B bit 5</td>
+	<td align="left">Nibble Port D bit 5</td>
+	<td align="left">Word Port A bit 5</td>
+</tr>
+<tr>
+	<td align="center">9</td>
+	<td align="center">PB6</td>
+	<td align="left">Byte Port B bit 6</td>
+	<td align="left">Nibble Port C bit 6</td>
+	<td align="left">Word Port A bit 6</td>
+</tr>
+<tr>
+	<td align="center">10</td>
+	<td align="center">PB7</td>
+	<td align="left">Byte Port B bit 7</td>
+	<td align="left">Nibble Port C bit 7</td>
+	<td align="left">Word Port A bit 7</td>
+</tr>
+<tr>
+	<td align="center">1</td>
+	<td align="center">DA6</td>
+	<td colspan="3" align="left">Digital IO bit 2</td>
+</tr>
+<tr>
+	<td align="center">1</td>
+	<td align="center">DA7</td>
+	<td colspan="3" align="left">Digital IO bit 2</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Shieldlet B Control Connector</strong></p>
+
+<table>
+<col align="center" />
+<col align="center" />
+<col align="left" />
+<col align="left" />
+<thead>
+<tr>
+	<th>Pin</th>
+	<th>Name</th>
+	<th>Function</th>
+	<th>Alternate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="center">1</td>
+	<td align="center">GND</td>
+	<td colspan="2" align="left">Digital IO Ground</td>
+</tr>
+<tr>
+	<td align="center">2</td>
+	<td align="center">5V</td>
+	<td colspan="2" align="left">5 Volt Supply</td>
+</tr>
+<tr>
+	<td align="center">3</td>
+	<td align="center">MOSI</td>
+	<td colspan="2" align="left">SPI - Serial IN</td>
+</tr>
+<tr>
+	<td align="center">4</td>
+	<td align="center">SCLK</td>
+	<td colspan="2" align="left">SPI - Serial Clock</td>
+</tr>
+<tr>
+	<td align="center">5</td>
+	<td align="center">SA0</td>
+	<td colspan="2" align="left">Virtual Shield Address 0</td>
+</tr>
+<tr>
+	<td align="center">6</td>
+	<td align="center">SA1</td>
+	<td colspan="2" align="left">Virtual Shield Address 1</td>
+</tr>
+<tr>
+	<td align="center">7</td>
+	<td align="center">GND</td>
+	<td colspan="2" align="left">Digital IO Ground</td>
+</tr>
+<tr>
+	<td align="center">8</td>
+	<td align="center">3.3V</td>
+	<td colspan="2" align="left">3.3 Volt Supply</td>
+</tr>
+<tr>
+	<td align="center">9</td>
+	<td align="center">SDA/Tx</td>
+	<td align="left">I2C - Port B Data</td>
+	<td align="left">Tx</td>
+</tr>
+<tr>
+	<td align="center">10</td>
+	<td align="center">SCL/Rx</td>
+	<td align="left">I2C - Port B Clock</td>
+	<td align="left">Rx</td>
+</tr>
+<tr>
+	<td align="center">11</td>
+	<td align="center">SS</td>
+	<td colspan="2" align="left">SPI - Serial Select</td>
+</tr>
+<tr>
+	<td align="center">12</td>
+	<td align="center">MISO</td>
+	<td colspan="2" align="left">SPI - Serial Out</td>
+</tr>
+</tbody>
+</table>
+
+<p><em>Note - The sharing of SDA/TX and SCL/RX is still up form debate, Rx/Tx doesn&#8217;t fit squarely with virtual shields as they are point to point, we may have to have them on pins however for compatability reasons. Thus the primary pin function of I2C should be assumed</em></p>
+
+<p><strong>1.5 Shields vs Shieldlets</strong>
+When the two shieldlets are combined into a single PCB/Card they become a shield and the shield is optionally capable of operating in 16bit Word mode. This is usefull for dealing with higher bandwidth or wider devices like for example a 16 bit ADC. Alternatively one could use a similar 16 bit ADC in 8 bit mode on a Shieldlet by interleaving the Bytes by using the shieldlet address bits, this would of course operate more slowly (half the speed). One could even use a 24 bit ADC in this manner if it supported byte transfer.</p>
+
+<p>Shields and Shieldlets also support stacking on top of each other. In this mode a shieldlet shares its Data port connectors and must pay attention to the shieldlet address pins to make sure data port contention does not occur. It would be possible thus to have up to eight shieldlets stacked (4 on each shield port) operating in byte or dual nibble modes.</p>
+
+<p>Thus there are 8 total 8bit wide (byte) virtual shield spaces (8 shieldlets)
+Thus there are 4 total 16bit wide (word) virtual shield spaces (4 shields)</p>
+
+<p>One must also pay attention to the bandwidth, if many shields are to be stacked the bandwidth may become proportionally more limited as the data must be interleaved over common data ports.</p>
+
+<p><strong>1.6 Electrical</strong></p>
+
+<p>All I/O and data levels operate at 3.3V logic. If multiple shields are to be supported  all data port signals need to be buffered as the shieldlet drivers have a limited current operation. In addition when using multiple shieldlets that input data to the Amino device it must also use high impedance output buffering so as not to interfere with other shieldlets on the same port.</p>
+
+<h2 id="operation">2.0 Operation</h2>
+
+<p><strong>2.1 Identification</strong>
+Each shieldlet should be capable of identifying its usage of virtual shield channel. A shield can also identify itself via a unique id. These two identification operations enable the Amino motherboard to adopt specific modes of operation. In some cases it may be used to load specific modules or drivers to handle the shieldlet.</p>
+
+<p>On startup each Virtual Shieldlet Channel (VSC) is successive addressed (using SAX pins), with each access a class descriptor (8bit int) should be returned for that channels usage. If x0 or no response is returned it is assumed that the VSC is unused.</p>
+
+<p>A special class of xF is reserved for dumb shieldlets, these just react to the state of the data port pins. An example would be 12 leds driven by the data port lines (prefreably buffered!!). For a board to indicate that it is of the &#8216;dumb class&#8217; simply connect SA0 and SA1 to MOSI via a resistor and diode in series creating DDL AND.This means a dumb board will take up 3 of the 4 SVCs on that shieldlet channel using this method. It could therefore be considered both dumb and an unfriendly neighbour.Adding a couple of gates, or transistors could improve omn this significantly, using a shift register of SPI ee</p>
+
+<p>prom/peripheral could do even better, try to be a good neighbour, otherwise folks won&#8217;t want to live next door.</p>
+
+<p><strong>2.1.1 Dumb Shieldlet Address decode using diode logic</strong></p>
+
+<p>SA0 &#8211;/\/\/&#8211;>|&#8211; MOSI</p>
+
+<p>SA1 &#8211;/\/\/&#8211;>|&#8211; MOSI</p>
+
+<p><strong>2.1.2 Intelligent and goog neighbourly shieldlet operation</strong></p>
+
+<p>here are two examples:</p>
+
+<p>Using a $0.20 SPI eeprom</p>
+
+<table>
+<col align="center" />
+<col align="left" />
+<thead>
+<tr>
+	<th colspan="2">EEPROM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="center">3.3V</td>
+	<td align="left">MOSI</td>
+</tr>
+<tr>
+	<td align="center">CS</td>
+	<td align="left">GND</td>
+</tr>
+<tr>
+	<td align="center">CLK</td>
+	<td align="left">MISO</td>
+</tr>
+</tbody>
+</table>
+
+<p>Basic : no added gates</p>
+
+<p>CS = SA0</p>
+
+<p>Indicates occupancy of 2 VSC SA0/SA1=10/11</p>
+
+<p>Better : single AND gate</p>
+
+<p>CS= SA0+SA1</p>
+
+<p>Indicates occupancy of single VSC SA0/SA1=10
+The AND could be made using a gate or transistors</p>
+
+<p>the classes can be read from the eeprom, allong with optional extra information such as driver ids, vendor info etc.. TDB</p>
+
+<p>2.1.3 Tests</p>
+
+<p>A set of tests can probably determine compliance to given classes of VSC, this will help provide assurance about shieldlets and their conformance particularly with a view to interoperation and good neighbourlyness!</p>
+</body>
+</html>
