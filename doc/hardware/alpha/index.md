@@ -19,4 +19,9 @@ Alpha is the very first opensource hardware implementation and reference impleme
 11. An optional MicroSD card for storage,sketches,applications or participant data.
 12. A communications multi status RGB LED indicator
 
+
+##The Amino Alpha layout
 ![Amino Alpha](alpha.png)
+
+[Alpha Schematic](alpha-schematic.pdf)
+
