@@ -10,7 +10,7 @@ Alpha is the very first opensource hardware implementation and reference impleme
 2. Built in debugging for layer 1
 3. External JTAG Debugging connector for Layer 2 and 3 debug.
 4. 10/100baseT Ethernet - implemented as an [HSM](../../hsm.html)
-5. Full speed (480Mb/sec) connection and PHY.
+5. Full speed usb 2(480Mb/sec) connection and PHY.
 6. Dedicated Serial communications UART and I2C on COMM port header
 7. Multiplexed 8 Channel 10bit successive approximation ADC with buffer
 8. 2 high speed XPorts offering up to 50MB/sec bandwidth each
