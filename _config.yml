@@ -1,4 +1,4 @@
-source: <your pages repo>
-destination: <the build dir>
+source: ./
+destination: ./_site
 lsi: false
 pygments: true
