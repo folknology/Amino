@@ -21,6 +21,8 @@ An Amino Xport is a peripheral extension interconnect to allow high bandwidth de
 
 |13.XCK| |14.XDA|
 
+|15.!PRST| |16.XSP|
+
 
 
 
