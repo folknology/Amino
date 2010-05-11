@@ -5,7 +5,7 @@ title: Amino Stamps Documentation
 
 #NetStamp#
 
-##Amino Opensource hardware reference implementation##:
+##Amino Opensource hardware reference implementation##
 
 
 ![NetStamp](stamp/stamp-pcb.png)
