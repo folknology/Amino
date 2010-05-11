@@ -28,6 +28,8 @@ NetStamp is the opensource hardware reference implementation for the Amino proje
 
 ![Design](stamp/design.jpg)
 
+![Design](stamp/design2.jpg)
+
 ![NetStamp](stamp/stamp-pcb.png)
 
 [Schematic](stamp/NetStamp.pdf)
