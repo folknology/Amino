@@ -3,9 +3,9 @@ layout: doc
 title: Amino Stamps Documentation
 ---
 
-#Amino Stamps Documentation#
+#NetStamp#
 
-Reference stamp:
+##Amino Opensource hardware reference implementation##:
 
 
 ![NetStamp](stamp/stamp-pcb.png)
