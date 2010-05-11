@@ -4,4 +4,6 @@ title: Amino Stamps Documentation
 ---
 
 #Amino Stamps Documentation#
-TBD
+
+Reference stamp:
+![NetStamp](stamp/stamp-pcb.png)
