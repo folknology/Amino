@@ -7,6 +7,8 @@ title: Amino Stamps Documentation
 
 ##Amino Opensource hardware reference implementation##
 
+NetStamp is the opensource hardware reference implementation for the Amino project, it supports all of the basic features and requirements of that project. NetStamp provides the latest XMOS multicore technology in an accessible stamp form factor, using dual inline connectors. Now anyone can build Xmos multi core projects without the need of complex surface mount assembly and production, lowering the barrier to entry for co-creative organisations and individuals alike. But NetStamp brings much more to the party than a regular stamp, it includes 100/10 base T Ethernet networking which when used with the Amino TCP/IP stack allows construction of sophisticated Internet based devices. With this new generation of Net based stamps a whole new era of intelligent Internet devices can be envisaged, prototyped and produced at a fraction of the cost of previous solutions. NetStamp introduces event driven processing to an audience who were previously denied access due to the complexities of surface mount technology, the Amino project will achieve similar software benefits to that very same audience.
+
 ###Features###
 
 1. Xmos dual core XS1 L2 multiprocessing 800-1000 MIPs of event driven processing
@@ -24,7 +26,8 @@ title: Amino Stamps Documentation
 
 ###Design & Layout###
 
-![NetStamp](stamp/stamp-pcb.png)
+![Design](stamp/design.jpg)
 
+![NetStamp](stamp/stamp-pcb.png)
 
 [Schematic](stamp/NetStamp.pdf)
