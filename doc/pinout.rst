@@ -10,7 +10,7 @@ Extended header available on full slots
 
 === === 
 R1  R2 
---- ---
+=== ===
 1V  5V
 D9  D10
 D11 D12
@@ -22,7 +22,7 @@ Basic header available on all slots
 
 === === 
 R1  R2 
---- ---
+=== ===
 D1  D5
 D2  D6
 D3  D7
